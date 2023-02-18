@@ -15,7 +15,7 @@
             arr[i] = Convert.ToInt32(Console.ReadLine());
         }
 
-        for (int i = 0; i < arr.Length; i++)
+        for (int i = 1; i < arr.Length; i++)
         {
             int k = arr[i];
             int j = i - 1;
@@ -31,7 +31,7 @@
 
         for (int i = 0; i < arr.Length; i++)
         {
-            Console.Write(arr[i] + ", ");
+            Console.Write(arr[i] + "| ");
         }
 
     }
