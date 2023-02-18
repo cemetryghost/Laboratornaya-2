@@ -1,4 +1,4 @@
-﻿class Program
+class Program
 {
     static void Main(string[] args)
     {
@@ -15,7 +15,11 @@
             arr[i] = Convert.ToInt32(Console.ReadLine());
         }
 
-        for (int i = 1; i < arr.Length; i++)
+        Console.WriteLine("Выберите вид сортировки (false - по возрастанию, true - по убыванию)");
+
+        bool vibor = Convert.ToBoolean(Console.ReadLine());
+
+        for (int i = 0; i < arr.Length; i++)
         {
             int k = arr[i];
             int j = i - 1;
@@ -27,12 +31,16 @@
             }
         }
 
+        if (vibor)
+        {
+            arr = arr.Reverse().ToArray();
+        }
+
         Console.Write("Сортировка: ");
 
         for (int i = 0; i < arr.Length; i++)
         {
             Console.Write(arr[i] + "| ");
         }
-
     }
 }
